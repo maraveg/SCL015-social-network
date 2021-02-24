@@ -15,7 +15,39 @@
 
 
 <body>
-  <div id="root">
+  <!-- <button onclick='FB.AppEvents.logEvent("buttonClicked")'>
+    Click me
+  </button>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '{http://localhost:5000/}',
+        cookie     : true,
+        xfbml      : true,
+        version    : '{api-v10.0}'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0&appId=819783628613532&autoLogAppEvents=1" 
+  nonce="m8tabOy0">
+</script> -->
+
+<div id="root">
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
@@ -41,7 +73,7 @@
   firebase.initializeApp(firebaseConfig);
 </script>
   </div>
-  <script type="module" src="main.js"></script>
+<script type="module" src="main.js"></script>
 
 </body>
 

@@ -28,6 +28,7 @@ export const logIn = () => {
 };
 
 export const createAccount = () => {
+  
   let email = document.querySelector('#text-mail').value;
   let password = document.querySelector('#text-password').value;  
   let region = document.querySelector('#region').value;
@@ -46,6 +47,6 @@ export const createAccount = () => {
       // alert("Revisa el email de verificación que te enviamos");
       // window.location.href = "";
     }
+    )
 }
-
 // <a href="#/wall"><button id="ingreso">Inicio Sesión</button></a>
