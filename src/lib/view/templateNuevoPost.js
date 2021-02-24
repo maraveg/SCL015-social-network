@@ -6,7 +6,6 @@ export const create = () => {
     <div class="col-md-6">
       <div class="card">
         <div class="card-body">
-
           <p id="create-title" class="h4">Ingresa</p>
 
           <form id="channels-form">
@@ -78,3 +77,4 @@ export const createChannels = () => {
 
   return divCreteChannels;
 };
+

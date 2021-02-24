@@ -2,7 +2,7 @@ export const signUp = () => {
   const divSignUp = document.createElement('div');
   const viewSignUp = `
     <div id="back-logo">
-    <img src="img/logo.png" alt="Petiperros-Logo">
+    <img class="logo-not-letters" src="./assets/logo-sin-letras.png">
     </div>
     <p>Bienvenido a Patiperros.
     Completa los datos para crear tu cuenta.</p>
