@@ -9,7 +9,7 @@ export const wall = () => {
 const displayChannels = (container, db) => {
   const outputData = container.querySelector('#channel-container');
   db.collection("channels").get().then((querySnapshot) => {
-    outputData.innerHTML = ""
+    outputData.innerHTML = '';
     querySnapshot.forEach((doc) => {
       outputData.innerHTML += `
     <div class="new-channel-cont">
@@ -19,8 +19,6 @@ const displayChannels = (container, db) => {
   </div>
     `;
       console.log(doc.data());
-
     });
-
   });
-}
+};

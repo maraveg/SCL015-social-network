@@ -1,6 +1,6 @@
 export const menu = () => {
-  const divMenu = document.createElement("div");
-    const viewMenu = `
+  const divMenu = document.createElement('div');
+  const viewMenu = `
     </style>
     <nav class="navbar navbar-expand-lg navbar-dark bg-lightgray">
     <div class="container-fluid navigation-bar">
@@ -25,6 +25,6 @@ export const menu = () => {
     </div>
   </nav>
       `;
-    divMenu.innerHTML = viewMenu;
-    return divMenu;
+  divMenu.innerHTML = viewMenu;
+  return divMenu;
 };

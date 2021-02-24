@@ -26,26 +26,3 @@ export const logIn = () => {
   });
   return divLogIn;
 };
-
-export const createAccount = () => {
-  let email = document.querySelector('#text-mail').value;
-  let password = document.querySelector('#text-password').value;  
-  let region = document.querySelector('#region').value;
-  console.log(region)
-  let city = document.querySelector('#city').value;
-  console.log(city)
-  console.log(event)
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      console.log(userCredential)
-      // const signUp = firebase.auth().currentUser;
-      // signUp.updateProfile({
-      //     displayName: firstName, lastName
-      // })
-      // signUp.sendVerificationEmail();
-      // alert("Revisa el email de verificación que te enviamos");
-      // window.location.href = "";
-    }
-}
-
-// <a href="#/wall"><button id="ingreso">Inicio Sesión</button></a>
