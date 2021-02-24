@@ -27,6 +27,7 @@ export const logIn = () => {
   return divLogIn;
 };
 
+
 export const createAccount = () => {
   
   let email = document.querySelector('#text-mail').value;

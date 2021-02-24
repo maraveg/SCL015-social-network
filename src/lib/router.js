@@ -15,7 +15,9 @@ import { routes } from '../lib/view/templateRutas.js';
 // import { timeline } from '../view/templateTimeline.js';
 
 export const changeRoute = (hash) => {
-  if (hash === '#/login') {
+  if (hash === '#/') {
+    return showTemplate(hash);
+  } else if (hash === '#/login') {
     return showTemplate(hash);
   } else if (hash === '#/signup') {
     return showTemplate(hash);
@@ -48,6 +50,9 @@ const showTemplate = (hash) => {
   const containerRoot = document.getElementById('root');
   containerRoot.innerHTML = '';
   switch (hash) {
+    case '':
+      containerRoot.appendChild(access());
+      break;
     case '#/':
       containerRoot.appendChild(access());
       break;
