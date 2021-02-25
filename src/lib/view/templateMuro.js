@@ -1,7 +1,8 @@
 export const wall = () => {
   const divWall = document.createElement('div');
   const viewWall = `
-    <p>Muro</p>
+
+
     `;
   divWall.innerHTML = viewWall;
   return divWall;

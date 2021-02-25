@@ -42,14 +42,25 @@ export const navBar = () => {
   <nav class="navbar navbar-expand-lg navbar-dark bg-lightgray">
   <div class="container-fluid navigation-bar">
     <a class="navbar-brand" href="#">
-      <img src="./assets/logo.png" />
+    <div id="container-wall">
+  <div class="head-icons">
+      <img id="logo" src="./assets/logo-sin-letras.png">
+      <a href="#/acces"><img src="./assets/home.png" id="home-icon"></a><br>
+      <a href="#/acces"><img src="./assets/plus.png" id="plus-icon"></a><br>
+      <a href="#/acces"><img src="./assets/hamburger-menu.png" id="menu-icon"></a><br>
+  </div>
     </a>
-    <ul class="navbar-nav">
+    
+  </div>
+</nav>
+    `;
+  divNavBar.innerHTML = viewNavBar;
+  return divNavBar;
+};
+
+{/* <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <div class="profileimg">
-              <img src="https://cdn.pixabay.com/photo/2017/10/11/08/02/phone-2840244_1280.jpg" width="40px" />
-            </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Blog</a></li>
@@ -59,10 +70,4 @@ export const navBar = () => {
             <li><a class="dropdown-item" href="#">Salir</a></li>
           </ul>
         </li>
-      </ul>
-  </div>
-</nav>
-    `;
-  divNavBar.innerHTML = viewNavBar;
-  return divNavBar;
-};
+      </ul> */}
