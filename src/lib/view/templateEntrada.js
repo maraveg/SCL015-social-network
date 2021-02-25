@@ -1,27 +1,24 @@
 export const access = () => {
   const divAccess = document.createElement('div');
   const viewAccess = `
-    <div id="entrada">
-        <img class="logo-letters" src="./assets/logo-letras.png">
-        <img class="img-watercolor" src="./assets/img-acuarela.jpg">
+ 
+    <div id="container-enter">
+      <div class="logo-letters"><img id="logo-letters" src="./assets/logo-letras.png"></div>
+      <div class="img-watercolor"><img id="img-watercolor" src="./assets/img-acuarela.jpg"></div>
       <div id="botones">
-        <a href="#/login"><button id="ingreso">INICIO SESION</button></a>
-        <a href="#/signup"><button id="ingreso">REGISTRO</button></a>
+        <a href="#/login"><button id="button-logIn">Inicia Sesión</button></a>
+        <a href="#/signup"><button id="button-register">Registrate</button></a>
       </div>
       <div>
-      <a href="#/login">Ingresa con</a>
-      <input type="image" id="google-button" class="back" src="./assets/logo.png">
-        <a href="#/sobre">¿Que es Patiperros?</a>
+        <a href="#/login" id="login-google">Ingresa con</a>
+        <input type="image" id="button-google" class="back" src="./assets/google.png">
       </div>
     </div>
-    // <div class="fb-like" 
-    // data-href="http://localhost:5000/" 
-    // data-width="25" 
-    // data-layout="standard" 
-    // data-action="like" 
-    // data-size="small" 
-    // data-share="true">
-    // </div>
+
+    <div class="about-us">
+    <a href="#/sobre" id="about-us" >¿Que es Patiperros?</a>
+    </div>
+  
     `;
   divAccess.innerHTML = viewAccess;
 //   FB.AppEvents.logPageView();
