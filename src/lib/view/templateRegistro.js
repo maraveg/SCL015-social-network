@@ -1,10 +1,12 @@
 export const signUp = () => {
   const divSignUp = document.createElement('div');
   const viewSignUp = `
+   <div id="signUp">
     <div id="back-logo">
     <img class="logo-not-letters" src="./assets/logo-sin-letras.png">
+    <a href="#/acces"><img src="./assets/back.png" id="back-icon"></a><br>
     </div>
-    <p>Bienvenido a Patiperros.
+    <p id="text-welcome">Bienvenido a Patiperros.
     Completa los datos para crear tu cuenta.</p>
     <div id="user-icon">
     <img src="" alt="">
@@ -19,6 +21,7 @@ export const signUp = () => {
       </div>
     <button id="signup-button" href="#/wall" >Crear Cuenta</button>
     <p>¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
+  </div>
     `;
   divSignUp.innerHTML = viewSignUp;
   const loginForm = divSignUp.querySelector('#signup-button');

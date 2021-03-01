@@ -1,6 +1,7 @@
 export const logIn = () => {
   const divLogIn = document.createElement('div');
   const viewLogIn = `
+    <div class="logIn">
     <input type="image" id="BotonVolver" class="back" src="./assets/logo.png">
     <div id="back-logo">
     <img src="img/logo.png" alt="Petiperros-Logo">
@@ -18,6 +19,7 @@ export const logIn = () => {
 
     <button id="login-buton">Inicio Sesión</button>
     <p>¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
+    </div>
     <div id="container"></div>
     `;
   divLogIn.innerHTML = viewLogIn;
