@@ -9,45 +9,84 @@ export const logIn = () => {
     Ingresa tus datos para iniciar sesión.</p>
     <div id="email-icon">
       <img src="" alt="">
-      <input type="Email" id="email" placeholder="Correo">
+      <input type="Email" id="login-email" placeholder="Correo">
     </div>
     <div id="password-icon">
       <img src="" alt="">
-      <input type="Password" id="password" placeholder="Contraseña">
+      <input type="Password" id="login-password" placeholder="Contraseña">
       </div>
 
-    <button id="ingreso">Inicio Sesión</button>
+    <button id="login-buton">Inicio Sesión</button>
     <p>¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
+    <div id="container"></div>
     `;
   divLogIn.innerHTML = viewLogIn;
-  const loginForm = divLogIn.querySelector('#ingreso');
-  loginForm.addEventListener('click', () => {
-    window.location.href = '#/wall';
-  });
+  const loginForm = divLogIn.querySelector('#login-buton');
+  loginForm.addEventListener('click', fbLogin);
+  // window.location.href = '#/wall';
   return divLogIn;
 };
 
+export const fbLogin = () => {
+  const logEmail = document.querySelector('#login-email').value;
+  const logPassword = document.querySelector('#login-password').value;
+  firebase.auth().signInWithEmailAndPassword(logEmail, logPassword)
+    // .then((user) => {
+    //   console.log(user);
+    // // Signed in
+    // // ...
+    // })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
+};
 
-export const createAccount = () => {
-  
-  let email = document.querySelector('#text-mail').value;
-  let password = document.querySelector('#text-password').value;  
-  let region = document.querySelector('#region').value;
-  console.log(region)
-  let city = document.querySelector('#city').value;
-  console.log(city)
-  console.log(event)
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      console.log(userCredential)
-      // const signUp = firebase.auth().currentUser;
-      // signUp.updateProfile({
-      //     displayName: firstName, lastName
-      // })
-      // signUp.sendVerificationEmail();
-      // alert("Revisa el email de verificación que te enviamos");
-      // window.location.href = "";
+export const observer = () => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      console.log('existe usuario activo');
+      logged();
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const displayName = user.displayName;
+      const email = user.email;
+      const emailVerified = user.emailVerified;
+      const photoURL = user.photoURL;
+      const isAnonymous = user.isAnonymous;
+      const uid = user.uid;
+      const providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out
+      console.log('no existe usuario activo');
+      // ...
     }
-    )
-}
+  });
+};
+observer();
+
+export const logged = () => {
+  const divContainer = document.getElementById('container');
+  const viewContainer = `
+  <p>¡Bienvenido!</p>
+  <button id="logout-buton">Cerrar Sesión</button>
+  `;
+  divContainer.innerHTML = viewContainer;
+  const logoutClick = divContainer.querySelector('#login-buton');
+  logoutClick.addEventListener('click', logout);
+  return divContainer;
+};
+
+export const logout = () => {
+  firebase.auth().signOut()
+    .then(() => {
+      console.log('Saliendo...');
+    // Sign-out successful.
+    }).catch((error) => {
+    // An error happened.
+    });
+};
 // <a href="#/wall"><button id="ingreso">Inicio Sesión</button></a>
