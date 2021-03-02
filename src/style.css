@@ -148,7 +148,8 @@ body{
     margin-left: 3%;
 } */
 .dropdown-item{
-    font-size: 16px;
+    font-size: 18px;
+    color: #7D7A7A;
 }
 /* .bg-lightgray {
 
@@ -163,4 +164,16 @@ body{
 .navbar{
     padding: 5px;
     margin-right: 10%;
+}
+
+/*    Template Nuevo Post   */
+
+.card{
+    background-color: #E5E5E5;
+
+}
+#btn-send-form{
+    background-color: #014D3F;
+    border-radius: 48px;
+    color: #ffffff;
 }

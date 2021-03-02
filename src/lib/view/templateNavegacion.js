@@ -8,7 +8,7 @@ export const navBar = () => {
           <div class="head-icons">
               <img id="logo" src="./assets/logo-sin-letras.png">
               <a href="#/acces"><img src="./assets/home.png" id="home-icon"></a><br>
-              <a href="#/acces"><img src="./assets/plus.png" id="plus-icon"></a><br>
+              <a href="#/newpost"><img src="./assets/plus.png" id="plus-icon"></a><br>
           </div>
     
     </a>
