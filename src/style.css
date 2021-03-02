@@ -9,7 +9,7 @@ body{
 
 #container-enter{
     background-color: #ffffff;
-    margin-left: 5%;
+    margin-left: 8%;
     margin-top: 10%;
     width: 302px;
     height: 500px;
@@ -70,7 +70,7 @@ body{
 }
 #about-us{
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     color:white;
 
 }
@@ -81,11 +81,11 @@ body{
 }
 
 /*    Template Inicio de Sesión    */
-
+/* 
 {
     background-color: #ffffff;
     width: 100vh;
-}
+} */
 
 /*    Template Muro   */
 
@@ -105,9 +105,75 @@ body{
 }
 #plus-icon{
     width: 30px;
-    margin-left: 58%;
+    margin-left: 48%;
 }
 #menu-icon{
+   
+}
+
+/*     Navbar     */
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    margin-left: 110%;
+    background-color: #E5E5E5;
+}
+
+#menu-icon {
     width: 30px;
     margin-left: 115%;
+    border-radius: 50%;
+    overflow: hidden;
+    /* commented for demo
+    float: left;
+    margin-left: 125px;
+    margin-top: 20px;
+    */
+
+    /*for demo*/
+    display:inline-block;
+    vertical-align:middle;
+}
+/* .profileimg img{
+    width:100%;
+    height: 100%;
+} */
+.navigation-bar .dropdown-toggle::after {
+    display: none;
+}
+/* .navigation-bar .navbar-brand img {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 90%;
+    margin-left: 3%;
+} */
+.dropdown-item{
+    font-size: 18px;
+    color: #7D7A7A;
+}
+/* .bg-lightgray {
+
+} */
+.navbar-brand {
+    width: 60%;
+}
+
+.mini{
+    left: -135px;
+}
+.navbar{
+    padding: 5px;
+    margin-right: 10%;
+}
+
+/*    Template Nuevo Post   */
+
+.card{
+    background-color: #E5E5E5;
+
+}
+#btn-send-form{
+    background-color: #014D3F;
+    border-radius: 48px;
+    color: #ffffff;
 }

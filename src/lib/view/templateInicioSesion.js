@@ -2,11 +2,10 @@ export const logIn = () => {
   const divLogIn = document.createElement('div');
   const viewLogIn = `
     <div class="logIn">
-    <input type="image" id="BotonVolver" class="back" src="./assets/logo.png">
-    <div id="back-logo">
-    <img src="img/logo.png" alt="Petiperros-Logo">
+    <input type="image" id="back-icon" class="back" src="./assets/back.png">
+    <img id="logo-right" src="./assets/logo-sin-letras.png">
     </div>
-    <p>¡Hola! Bienvenido otra vez.
+    <p id="hello-text">¡Hola! Bienvenido otra vez.
     Ingresa tus datos para iniciar sesión.</p>
     <div id="email-icon">
       <img src="" alt="">
@@ -18,7 +17,7 @@ export const logIn = () => {
       </div>
 
     <button id="login-buton">Inicio Sesión</button>
-    <p>¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
+    <p id="dont-account">¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
     </div>
     <div id="container"></div>
     `;
