@@ -50,11 +50,17 @@ export const observer = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       console.log('existe usuario activo');
-      logged();
+      console.log(user);
+      logged(user);
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       const displayName = user.displayName;
       const email = user.email;
+      
+      console.log('**************');
+      console.log(user.emailVerified);
+      console.log('**************');
+
       const emailVerified = user.emailVerified;
       const photoURL = user.photoURL;
       const isAnonymous = user.isAnonymous;
@@ -70,14 +76,16 @@ export const observer = () => {
 };
 observer();
 
-export const logged = () => {
+export const logged = (user) => {
   const divContainer = document.getElementById('container');
-  const viewContainer = `
-  <p>¡Bienvenido!</p>
-  <button id="logout-buton">Cerrar Sesión</button>
-  `;
-  divContainer.innerHTML = viewContainer;
-  const logoutClick = divContainer.querySelector('#login-buton');
+  if (user.emailVerified) {
+    const viewContainer = `
+    <p>¡Bienvenido!</p>
+    <button id="logout-buton">Cerrar Sesión</button>
+    `;
+    divContainer.innerHTML = viewContainer;
+  }
+  const logoutClick = divContainer.querySelector('#logout-buton');
   logoutClick.addEventListener('click', logout);
   return divContainer;
 };

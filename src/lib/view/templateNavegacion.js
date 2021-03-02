@@ -48,7 +48,21 @@ export const navBar = () => {
       <a href="#/acces"><img src="./assets/home.png" id="home-icon"></a><br>
       <a href="#/acces"><img src="./assets/plus.png" id="plus-icon"></a><br>
       <a href="#/acces"><img src="./assets/hamburger-menu.png" id="menu-icon"></a><br>
+      <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Blog</a></li>
+          <li><a class="dropdown-item" href="#/meet">Conocenos</a></li>
+          <li><a class="dropdown-item" href="#/routes">Rutas</a></li>
+          <li><a class="dropdown-item" href="#/profile">Perfil</a></li>
+          <li><a class="dropdown-item" href="#">Salir</a></li>
+        </ul>
+      </li>
+    </ul> 
   </div>
+  
     </a>
     
   </div>
@@ -58,16 +72,3 @@ export const navBar = () => {
   return divNavBar;
 };
 
-{/* <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Blog</a></li>
-            <li><a class="dropdown-item" href="#/meet">Conocenos</a></li>
-            <li><a class="dropdown-item" href="#/routes">Rutas</a></li>
-            <li><a class="dropdown-item" href="#/profile">Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Salir</a></li>
-          </ul>
-        </li>
-      </ul> */}
