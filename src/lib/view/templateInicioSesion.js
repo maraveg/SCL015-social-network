@@ -2,15 +2,16 @@ export const logIn = () => {
   const divLogIn = document.createElement('div');
   const viewLogIn = `
   <div class="logIn">
-  <div class="head">
-    <a class="back" href="#/">
-    <img src="./assets/back.png" id="back-icon">
-    </a>
-    <img id="logo-right" src="./assets/logo-sin-letras.png">
-  </div>
+    <div class="head">
+      <a class="back" href="#/">
+      <img src="./assets/back.png" id="back-icon">
+      </a>
+      <img id="logo-right" src="./assets/logo-sin-letras.png">
+    </div>
     
     <div class="text"><p id="hello-text">¡Hola! Bienvenido otra vez.
-    Ingresa tus datos para iniciar sesión.</p></div>
+      Ingresa tus datos para iniciar sesión.</p>
+    </div>
     <div class="email">
       <img src="./assets/e-mail.png" id="email-icon">
       <input type="Email" id="login-email" placeholder="Correo">
@@ -18,10 +19,11 @@ export const logIn = () => {
     <div class="password">
       <img src="./assets/password.png" id="password-icon">
       <input type="Password" id="login-password" placeholder="Contraseña">
-      </div>
+    </div>
 
     <button id="login-buton">Inicio Sesión</button>
-    <div class="dont-account"><p id="dont-account">¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
+    <div class="dont-account">
+      <p id="dont-account">¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
     </div>
     <br>
   </div>
