@@ -24,9 +24,9 @@ export const signUp = () => {
       <input type="Password" id="signup-password" placeholder="Contraseña">
     </div>
 
-    <button id="signup-button" href="#/wall" >Crear Cuenta</button>
+      <button id="signup-button" href="#/wall" >Crear Cuenta</button>
     <div class="text-signup">
-    <p id="text-signup">¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
+      <p id="text-signup">¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
     </div>
     <br>
   </div>`;
