@@ -48,6 +48,7 @@ export const createAccount = () => {
         UserName: userName,
         Email: email,
         Uid: userCredential.user.uid,
+        
       })
         .then((docRef) => {
           console.log("Document written with ID: ", docRef.id);

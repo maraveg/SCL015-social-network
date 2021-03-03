@@ -1,49 +1,48 @@
-import { meetUs } from '../lib/view/templateConocenos.js';
-import { aside } from '../lib/view/templateCostado.js';
-import { editPost } from '../lib/view/templateEditar.js';
-import { access } from '../lib/view/templateEntrada.js';
+import { meetUs } from './view/templateConocenos.js';
+import { aside } from './view/templateCostado.js';
+import { editPost } from './view/templateEditar.js';
+import { access } from './view/templateEntrada.js';
 // import { home } from '../view/templateHome.js';
-import { logIn } from '../lib/view/templateInicioSesion.js';
+import { logIn } from './view/templateInicioSesion.js';
 import { menu } from './view/templateMenu.js';
-import { wall } from '../lib/view/templateMuro.js';
-import { navBar } from '../lib/view/templateNavegacion.js';
-import { create } from '../lib/view/templateNuevoPost.js';
-import { profile } from '../lib/view/templatePerfil.js';
-import { about } from '../lib/view/templateQueEs.js';
-import { signUp } from '../lib/view/templateRegistro.js';
-import { routes } from '../lib/view/templateRutas.js';
+import { wall } from './view/templateMuro.js';
+import { navBar } from './view/templateNavegacion.js';
+import { create } from './view/templateNuevoPost.js';
+import { profile } from './view/templatePerfil.js';
+import { about } from './view/templateQueEs.js';
+import { signUp } from './view/templateRegistro.js';
+import { routes } from './view/templateRutas.js';
 // import { timeline } from '../view/templateTimeline.js';
 
 export const changeRoute = (hash) => {
   if (hash === '#/') {
     return showTemplate(hash);
-  } else if (hash === '#/login') {
+  } if (hash === '#/login') {
     return showTemplate(hash);
-  } else if (hash === '#/signup') {
+  } if (hash === '#/signup') {
     return showTemplate(hash);
-  } else if (hash === '#/wall') {
+  } if (hash === '#/wall') {
     return showTemplate(hash);
-  } else if (hash === '#/nav') {
+  } if (hash === '#/nav') {
     return showTemplate(hash);
-  } else if (hash === '#/newpost') {
+  } if (hash === '#/newpost') {
     return showTemplate(hash);
-  } else if (hash === '#/about') {
+  } if (hash === '#/about') {
     return showTemplate(hash);
-  } else if (hash === '#/aside') {
+  } if (hash === '#/aside') {
     return showTemplate(hash);
-  } else if (hash === '#/menu') {
+  } if (hash === '#/menu') {
     return showTemplate(hash);
-  } else if (hash === '#/meet') {
+  } if (hash === '#/meet') {
     return showTemplate(hash);
-  } else if (hash === '#/editpost') {
+  } if (hash === '#/editpost') {
     return showTemplate(hash);
-  } else if (hash === '#/profile') {
+  } if (hash === '#/profile') {
     return showTemplate(hash);
-  } else if (hash === '#/routes') {
-    return showTemplate(hash);
-  } else {
+  } if (hash === '#/routes') {
     return showTemplate(hash);
   }
+  return showTemplate(hash);
 };
 
 const showTemplate = (hash) => {

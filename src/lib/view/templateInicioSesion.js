@@ -55,7 +55,6 @@ export const observer = () => {
       // https://firebase.google.com/docs/reference/js/firebase.User
       const displayName = user.displayName;
       const email = user.email;
-      
       console.log('**************');
       console.log(user.emailVerified);
       console.log('**************');
@@ -96,6 +95,7 @@ export const logout = () => {
     // Sign-out successful.
     }).catch((error) => {
     // An error happened.
+      console.log(error);
     });
 };
 // <a href="#/wall"><button id="ingreso">Inicio Sesión</button></a>
