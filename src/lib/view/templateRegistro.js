@@ -13,15 +13,15 @@ export const signUp = () => {
   
     <div class="user">
     <img src="./assets/user.png" id="user-icon">
-    <input type="user" id="user" placeholder="Usuario">
+    <input type="user" id="signup-name" placeholder="Usuario">
     </div>
     <div class="email-sign">
     <img src="./assets/e-mail.png" id="email-icon">
-    <input type="Email" id="sign-email" placeholder="Correo">
+    <input type="Email" id="signup-email" placeholder="Correo">
     </div>
     <div class="password-sign">
     <img src="./assets/password.png" id="password-icon">
-    <input type="Password" id="sign-password" placeholder="Contraseña">
+    <input type="Password" id="signup-password" placeholder="Contraseña">
     </div>
 
     <button id="signup-button" href="#/wall" >Crear Cuenta</button>

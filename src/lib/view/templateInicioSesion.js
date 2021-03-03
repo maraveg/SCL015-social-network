@@ -1,30 +1,25 @@
 export const logIn = () => {
   const divLogIn = document.createElement('div');
   const viewLogIn = `
-  <div class="logIn">
-  <div class="head">
-    <a class="back" href="#/">
-    <img src="./assets/back.png" id="back-icon">
-    </a>
+    <div class="logIn">
+    <input type="image" id="back-icon" class="back" src="./assets/back.png">
     <img id="logo-right" src="./assets/logo-sin-letras.png">
-  </div>
-    
-    <div class="text"><p id="hello-text">¡Hola! Bienvenido otra vez.
-    Ingresa tus datos para iniciar sesión.</p></div>
-    <div class="email">
-      <img src="./assets/e-mail.png" id="email-icon">
+    </div>
+    <p id="hello-text">¡Hola! Bienvenido otra vez.
+    Ingresa tus datos para iniciar sesión.</p>
+    <div id="email-icon">
+      <img src="" alt="">
       <input type="Email" id="login-email" placeholder="Correo">
     </div>
-    <div class="password">
-      <img src="./assets/password.png" id="password-icon">
+    <div id="password-icon">
+      <img src="" alt="">
       <input type="Password" id="login-password" placeholder="Contraseña">
       </div>
 
     <button id="login-buton">Inicio Sesión</button>
-    <div class="dont-account"><p id="dont-account">¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
+    <p id="dont-account">¿No tienes una cuenta? <a href="#/signup"><strong>Registrate aquí</strong></a></p>
     </div>
-    <br>
-  </div>
+    <div id="container"></div>
     `;
   divLogIn.innerHTML = viewLogIn;
   const loginForm = divLogIn.querySelector('#login-buton');
@@ -34,14 +29,16 @@ export const logIn = () => {
 };
 
 export const fbLogin = () => {
+  console.log('funcion fblogin');
   const logEmail = document.querySelector('#login-email').value;
   const logPassword = document.querySelector('#login-password').value;
   firebase.auth().signInWithEmailAndPassword(logEmail, logPassword)
-    // .then((user) => {
-    //   console.log(user);
+    .then((user) => {
+      console.log(user)
+      window.location.href = '#/wall';
     // // Signed in
     // // ...
-    // })
+    })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -49,6 +46,7 @@ export const fbLogin = () => {
       console.log(errorMessage);
     });
 };
+
 
 export const observer = () => {
   firebase.auth().onAuthStateChanged((user) => {
