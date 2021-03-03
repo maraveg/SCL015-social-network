@@ -1,25 +1,35 @@
 export const signUp = () => {
   const divSignUp = document.createElement('div');
   const viewSignUp = `
-    <div id="back-logo">
-    <img class="logo-not-letters" src="./assets/logo-sin-letras.png">
+  <div class="signUp">
+    <div class="head">
+      <a class="back" href="#/">
+      <img src="./assets/back.png" id="back-icon">
+      </a>
+      <img id="logo-right" src="./assets/logo-sin-letras.png">
     </div>
-    <p>Bienvenido a Patiperros.
-    Completa los datos para crear tu cuenta.</p>
-    <div id="user-icon">
-    <img src="" alt="">
-    <input type="text" id="signup-name" placeholder="Nombre Usuario">
-      <div id="email-icon">
-      <img src="" alt="">
-      <input type="Email" id="signup-email" placeholder="Correo">
+    <div class="text"><p id="welcome-text">Bienvenido a Patiperros. 
+    Completa tus datos para crear tu cuenta.</p></div>
+  
+    <div class="user">
+    <img src="./assets/user.png" id="user-icon">
+    <input type="user" id="user" placeholder="Usuario">
     </div>
-    <div id="password-icon">
-      <img src="" alt="">
-      <input type="Password" id="signup-password" placeholder="Contraseña">
-      </div>
+    <div class="email-sign">
+    <img src="./assets/e-mail.png" id="email-icon">
+    <input type="Email" id="sign-email" placeholder="Correo">
+    </div>
+    <div class="password-sign">
+    <img src="./assets/password.png" id="password-icon">
+    <input type="Password" id="sign-password" placeholder="Contraseña">
+    </div>
+
     <button id="signup-button" href="#/wall" >Crear Cuenta</button>
-    <p>¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
-    `;
+    <div class="text-signup">
+    <p id="text-signup">¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
+    </div>
+    <br>
+  </div>`;
   divSignUp.innerHTML = viewSignUp;
   const loginForm = divSignUp.querySelector('#signup-button');
   loginForm.addEventListener('click', () => {

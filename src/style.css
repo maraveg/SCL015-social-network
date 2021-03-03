@@ -45,6 +45,7 @@ body{
     margin-top: 7%;
     margin-left: 25%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 
 #button-register{
@@ -57,6 +58,7 @@ body{
     margin-top: 7%;
     margin-left: 25%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 #login-google{
     color: #0B5256;
@@ -81,12 +83,188 @@ body{
 }
 
 /*    Template Inicio de Sesión    */
-/* 
-{
-    background-color: #ffffff;
-    width: 100vh;
-} */
 
+.logIn{
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, #E5E5E5, #ffffff);
+    width: 100%;
+}
+.head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#logo-right{
+    width: 60px;
+    margin-left: 68%;
+    margin-top: 5%;
+}
+#back-icon{
+    width: 30px;
+    margin-left: 3%;
+    margin-top: 7%;
+}
+.text{
+    margin-top: 5%;
+    
+}
+#hello-text{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #0B5256;
+}
+#password-icon{
+    width: 30px;
+    margin-top: 10%;
+}
+#email-icon{
+    width: 30px;
+    margin-top: 10%;
+}
+::placeholder { 
+    color: #7b8794;
+    margin-left: 5%;
+    text-align: left;
+    border: 10px;
+    font-size: 16px;
+}
+#login-password{
+    background-color: #E5E5E5;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 70%;
+    height: 35px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
+}
+#login-email{
+    background-color: #E5E5E5;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 70%;
+    height: 35px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.email{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.password{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+#login-buton{
+    margin-left: 28%;
+    margin-top: 30%;
+    background-color: #76CE3B;
+    color: white;
+    width: 175px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+#dont-account{
+    font-size: 17px;
+    margin-left: 5%;
+    margin-top: 28%;
+    color: #0B5256;
+}
+.dont-account{
+    margin-bottom: 10%;
+}
+
+/*     Template Registro     */
+
+.signUp{
+    background-color: #ffffff;
+    background: linear-gradient(to bottom, #E5E5E5, #ffffff);
+    width: 100%;
+}
+#welcome-text{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #0B5256;
+}
+#user{
+    background-color: #E5E5E5;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 70%;
+    height: 35px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+#user-icon{
+    width: 30px;
+    margin-left: 3%;
+    margin-top: 7%;
+}
+.email-sign{
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+}
+.password-sign{
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+}
+#sign-email{
+    background-color: #E5E5E5;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 72%;
+    height: 35px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+#sign-password{
+    background-color: #E5E5E5;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 5px;
+    width: 72%;
+    height: 35px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+#signup-button{
+    margin-left: 28%;
+    margin-top: 25%;
+    background-color: #76CE3B;
+    color: white;
+    width: 175px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+.text-signup{
+    margin-bottom: 10%;
+}
+#text-signup{
+    font-size: 17px;
+    margin-left: 8%;
+    margin-top: 10%;
+    color: #0B5256;
+}
 /*    Template Muro   */
 
 .head-icons{
