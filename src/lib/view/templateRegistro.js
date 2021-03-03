@@ -12,21 +12,21 @@ export const signUp = () => {
     Completa tus datos para crear tu cuenta.</p></div>
   
     <div class="user">
-    <img src="./assets/user.png" id="user-icon">
-    <input type="user" id="signup-name" placeholder="Usuario">
+      <img src="./assets/user.png" id="user-icon">
+      <input type="user" id="signup-name" placeholder="Usuario">
     </div>
     <div class="email-sign">
-    <img src="./assets/e-mail.png" id="email-icon">
-    <input type="Email" id="signup-email" placeholder="Correo">
+      <img src="./assets/e-mail.png" id="email-icon">
+      <input type="Email" id="signup-email" placeholder="Correo">
     </div>
     <div class="password-sign">
-    <img src="./assets/password.png" id="password-icon">
-    <input type="Password" id="signup-password" placeholder="Contraseña">
+      <img src="./assets/password.png" id="password-icon">
+      <input type="Password" id="signup-password" placeholder="Contraseña">
     </div>
 
-    <button id="signup-button" href="#/wall" >Crear Cuenta</button>
+      <button id="signup-button" href="#/wall" >Crear Cuenta</button>
     <div class="text-signup">
-    <p id="text-signup">¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
+      <p id="text-signup">¿Ya tienes una cuenta? <a href="#/login"><strong>Ingresa aquí</strong></a></p>
     </div>
     <br>
   </div>`;

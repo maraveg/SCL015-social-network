@@ -16,8 +16,10 @@ const displayPost = (container, db) => {
     querySnapshot.forEach((doc) => {
       outputData.innerHTML += `
     <div class="new-channel-cont">
-    <img type="image" class="undraw_img" src="./assets/undraw_universe.png">
+    <img type="image" class="icon-pencil" src="./assets/pencil.png">
     <p id="channel-print" class="new-channel-description">${doc.data().Post}</p>
+    <img type="image" class="icon-moon" src="./assets/moon.png">
+    <img type="image" class="icon-commentary" src="./assets/commentary.png">
     </div>
     `;
     });
