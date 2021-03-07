@@ -17,9 +17,11 @@ export const logIn = () => {
       <img src="./assets/e-mail.png" id="email-icon">
       <input type="Email" id="login-email" placeholder="Correo">
     </div>
-    <div id="password-icon">
-      <img src="" alt="">
+    <div id="">
+    <div class="password">
+      <img src="./assets/password.png" id="password-icon">
       <input type="Password" id="login-password" placeholder="Contraseña">
+    </div>
     </div>
 
        <button id="login-buton">Inicio Sesión</button>
@@ -43,7 +45,7 @@ export const fbLogin = () => {
   const logPassword = document.querySelector('#login-password').value;
   firebase.auth().signInWithEmailAndPassword(logEmail, logPassword)
     .then((user) => {
-      console.log(user)
+      console.log({ prueba: user })
       window.location.href = '#/wall';
     // // Signed in
     // // ...
@@ -59,24 +61,9 @@ export const fbLogin = () => {
 
 export const observer = () => {
   firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
+    if (user && user.emailVerified === true) {
       console.log('existe usuario activo');
-      console.log(user);
-      logged(user);
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      const displayName = user.displayName;
-      const email = user.email;
-      console.log('**************');
-      console.log(user.emailVerified);
-      console.log('**************');
-
-      const emailVerified = user.emailVerified;
-      const photoURL = user.photoURL;
-      const isAnonymous = user.isAnonymous;
-      const uid = user.uid;
-      const providerData = user.providerData;
-      // ...
+      window.location.href = '#/wall'
     } else {
       // User is signed out
       console.log('no existe usuario activo');
@@ -87,7 +74,7 @@ export const observer = () => {
 observer();
 
 export const logged = (user) => {
-  const divContainer = document.getElementById('container');
+  const divContainer = document.querySelector('#container');
   if (user.emailVerified) {
     const viewContainer = `
     <p>¡Bienvenido!</p>
