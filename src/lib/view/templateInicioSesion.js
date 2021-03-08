@@ -46,7 +46,7 @@ export const fbLogin = () => {
   firebase.auth().signInWithEmailAndPassword(logEmail, logPassword)
     .then((user) => {
       console.log({ prueba: user })
-      window.location.href = '#/wall';
+      // window.location.href = '#/wall';
     // // Signed in
     // // ...
     })

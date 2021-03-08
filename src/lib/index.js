@@ -15,6 +15,7 @@ export const login = () => {
     // The signed-in user info.
     var user = result.user;
     (console.log ('user', user))
+   // window.location.href = '#/wall'
     // ...
   }).catch((error) => {
     // Handle Errors here.

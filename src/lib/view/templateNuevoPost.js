@@ -37,7 +37,7 @@ export const create = () => {
   console.log(author, 'holaaa');
   const authorUid = author.uid;
   console.log(authorUid, 'uid del usuario');
-
+  const date = new Date();
   const taskForm = divCreate.querySelector('#btn-send-form');
   console.log(taskForm);
   // const taskForm = document.getElementById("task-form");
@@ -47,9 +47,11 @@ export const create = () => {
     // db.collection('canales').get().then((item) => {
 
     db.collection('posts').add({
+      name: author.displayName,
+      Date: date,
       Post: newText,
       author: authorUid,
-      name: author.displayName,
+      
 
       // user: {
       //   UserName: userName,

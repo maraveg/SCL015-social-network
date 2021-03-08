@@ -12,7 +12,7 @@ export const access = () => {
         <a href="#/signup"><button id="button-register">Registrate</button></a>
       </div>
       <div>
-        <a href="#/wall" id="login-google">Ingresa con</a>
+        <a id="login-google">Ingresa con</a>
         <input type="image" id="button-google" class="back" src="./assets/google.png">
       </div>
     </div>
@@ -27,6 +27,7 @@ export const access = () => {
   const button = divAccess.querySelector('#login-google');
   button.addEventListener('click', () => {
     login()
+    
   })
   return divAccess;
 };
