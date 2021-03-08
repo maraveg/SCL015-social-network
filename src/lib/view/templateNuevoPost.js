@@ -31,6 +31,12 @@ export const create = () => {
   divCreate.innerHTML = viewCreate;
 
   const db = firebase.firestore();// var que guarda la data
+  const author = firebase.auth().currentUser;
+  const userEmail = author.email;
+  console.log(userEmail);
+  console.log(author, 'holaaa');
+  const authorUid = author.uid;
+  console.log(authorUid, 'uid del usuario');
 
   const taskForm = divCreate.querySelector('#btn-send-form');
   console.log(taskForm);
@@ -41,7 +47,17 @@ export const create = () => {
     // db.collection('canales').get().then((item) => {
 
     db.collection('posts').add({
-      Post: newText })
+      Post: newText,
+      author: authorUid,
+      name: author.displayName,
+
+      // user: {
+      //   UserName: userName,
+      //   Email: email,
+      // Uid: users.Uid,
+
+      // },
+    })
       .then((docRef) => {
         console.log('Document written with ID: ', docRef.id);
         window.location.href = '#/wall'
