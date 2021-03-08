@@ -66,8 +66,12 @@ export const createAccount = () => {
            var errorMessage = error.message;
            // [START_EXCLUDE]
            if (errorCode == 'auth/weak-password') {
-               console.log('La contraseña es muy corta');
-           } else {
+               Alert('La contraseña es muy corta');
+               
+           } else if (errorCode == 'auth/invalid-email') {
+            alert('El correo ingresado no es valido')
+          } else {
+             
                console.log(errorMessage);
            }
       // const author = firebase.auth().userCredential.user;
