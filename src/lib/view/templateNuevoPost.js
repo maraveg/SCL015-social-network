@@ -52,7 +52,7 @@ export const create = () => {
       Post: newText,
       author: authorUid,
       
-
+ 
       // user: {
       //   UserName: userName,
       //   Email: email,
