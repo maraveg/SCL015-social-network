@@ -17,15 +17,16 @@ const displayPost = (container, db) => {
     querySnapshot.forEach((doc) => {
       console.log(doc.data());
       outputData.innerHTML += `
-    <div class="new-channel-cont">
-    <img type="image" class="icon-pencil" src="./assets/pencil.png">
-    <p id="channel-print" class="new-channel-description">${doc.data().name}</p>
-    <p id="channel-print" class="new-channel-description">${doc.data().Date.toDate().toLocaleDateString("es-CL")}</p>
-    <p id="channel-print" class="new-channel-description">${doc.data().Post}</p>
-    <p id="channel-print" class="new-channel-description">${doc.id}</p>
-    <img type="image" class="icon-moon" src="./assets/moon.png">
-    <img type="image" class="icon-commentary" src="./assets/commentary.png">
-    </div>
+        <div class="new-channel-cont">
+        <img type="image" class="icon-pencil" src="./assets/pencil.png">
+        <img type="image" class="icon-pencil" src="./assets/trash.png">
+        <p id="channel-print" class="new-channel-description">${doc.data().name}</p>
+        <p id="channel-print" class="new-channel-description">${doc.data().Date.toDate().toLocaleDateString("es-CL")}</p>
+        <p id="channel-print" class="new-channel-description">${doc.data().Post}</p>
+        <p id="channel-print" class="new-channel-description">${doc.id}</p>
+        <img type="image" class="icon-moon" src="./assets/moon.png">
+        <img type="image" class="icon-commentary" src="./assets/commentary.png">
+        </div>
     `;
     });
   });

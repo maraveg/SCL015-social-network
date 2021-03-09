@@ -64,16 +64,16 @@ export const createAccount = () => {
            // Handle Errors here.
            var errorCode = error.code;
            var errorMessage = error.message;
-           // [START_EXCLUDE]
-           if (errorCode == 'auth/weak-password') {
-               Alert('La contraseña es muy corta');
+          //  // [START_EXCLUDE]
+          //  if (errorCode == 'auth/weak-password') {
+          //      Alert('La contraseña es muy corta');
                
-           } else if (errorCode == 'auth/invalid-email') {
-            alert('El correo ingresado no es valido')
-          } else {
+          //  } else if (errorCode == 'auth/invalid-email') {
+          //   alert('El correo ingresado no es valido')
+          // } else {
              
-               console.log(errorMessage);
-           }
+            console.log(errorMessage);
+          //  }
       // const author = firebase.auth().userCredential.user;
       // console.log(author, 'network');
       
@@ -97,7 +97,16 @@ export const createAccount = () => {
       const errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
-      // alert("Revisa el email de verificación que te enviamos");
+      if (errorCode == 'auth/weak-password') {
+        Alert('Contraseña muy corta. Debe ser superior a 6 dígitos');
+        
+    } else if (errorCode == 'auth/invalid-email') {
+     alert('El correo ingresado no es valido')
+   } else {
+      
+        // console.log(errorMessage);
+    }
+  
     });
 };
 
