@@ -23,7 +23,8 @@ console.log(user, 'array user');
     <div class="new-channel-cont">`;
       if (user && user.emailVerified === true) {
         if ((doc.data().author && user.emailVerified === true)) {
-        outputData.innerHTML += `<img type="image" class="icon-pencil" src="./assets/pencil.png">`;
+        outputData.innerHTML += `<img type="image" class="icon-pencil" src="./assets/pencil.png">;
+        <img type="image" class="icon-pencil" src="./assets/trash.png">`;
       }
       } else {
       // User is signed out
@@ -38,7 +39,7 @@ console.log(user, 'array user');
     <img type="image" class="icon-moon" src="./assets/moon.png">
     <img type="image" class="icon-commentary" src="./assets/commentary.png">
     </div>
-    `;
+        `;
     });
   });
 }

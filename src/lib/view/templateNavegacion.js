@@ -24,7 +24,7 @@ export const navBar = () => {
         <li><a class="dropdown-item" href="#/meet">Conocenos</a></li>
         <li><a class="dropdown-item" href="#/routes">Rutas</a></li>
         <li><a class="dropdown-item" href="#/profile">Perfil</a></li>
-        <li><a id="close-sesiion" class="dropdown-item" href="#">Salir</a></li>
+        <li><a id="close-sesion" class="dropdown-item" href="#">Salir</a></li>
       </ul>
     </li>
    </ul> 
@@ -33,7 +33,7 @@ export const navBar = () => {
 </nav>
     `;
   divNavBar.innerHTML = viewNavBar;
-  const register = divNavBar.querySelector('#close-sesiion');
+  const register = divNavBar.querySelector('#close-sesion');
   register.addEventListener('click', logout);
   return divNavBar;
 };
