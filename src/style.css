@@ -267,12 +267,13 @@ body{
 /*    Template Muro   */
 
 .head-icons{
-    background-color: #014D3F ;
+    background-color: #014D3F;
     position: fixed;
-    margin: 10px auto;
+    /* margin: 10px auto; */
     width: 100%;
     display: flex;
     align-items: center;
+    margin-top: 10%;
 }
 #logo{
     width: 60px;
@@ -296,24 +297,33 @@ body{
 
 .container-white{
     background-color: #ffffff;
-    width: 297px;
+    width: 90%;
     margin-left: 5%;
-    margin-top: 7%;
+    margin-top: 3%;
+    border-radius: 5px;
 }
 .new-channel-description{
     font-size: 17px;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 3%;
-    margin-right: 5%;
+    margin-right: 18%;
     background-color: #ffffff;
+    color: #014D3F;
+}
+#channel-print-name{
+    margin-left: 3%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #014D3F;
+}
+#channel-print-date{
+    margin-left: 36%;
+    font-size: 16px;
+    font-weight: bold;
     color: #014D3F;
 }
 #container-text{
     background-color: blue;
-}
-.icon-pencil{
-    width: 19px;
-    margin-left: 94%;
 }
 .icon-moon{
     width: 19px;
@@ -334,7 +344,7 @@ body{
 
 #menu-icon {
     width: 30px;
-    margin-left: 115%;
+    margin-left: 90%;
     border-radius: 50%;
     overflow: hidden;
     /* commented for demo
@@ -379,8 +389,24 @@ body{
     margin-right: 10%;
 }
 .icon-pencil{
+    /* position: fixed; */
     display: flex;
-    align-content: space-between;
+    align-items: center;
+    margin-left: 80%;
+}
+#pencil{
+    width: 20px;
+    margin-top: 50%;
+    margin-left: 15%;
+}
+#trash{
+    width: 20px;
+    margin-top: 50%;
+    margin-left: 15%;
+}
+.post-head{
+    display: flex;
+    align-items: center; 
 }
 
 /*    Template Nuevo Post   */
@@ -393,4 +419,7 @@ body{
     background-color: #014D3F;
     border-radius: 48px;
     color: #ffffff;
+}
+.col-md-6{
+    margin-top: 15%;
 }
