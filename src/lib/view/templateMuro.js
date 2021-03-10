@@ -15,16 +15,19 @@ const displayPost = (container, db) => {
   const user = firebase.auth().currentUser;
 console.log(user, 'array user');
   const outputData = container.querySelector('#container-wall');
+
   db.collection("posts").orderBy('Date', 'desc').get().then((querySnapshot) => {
     outputData.innerHTML = ''
     querySnapshot.forEach((doc) => {
+      
       console.log(doc.data());
       outputData.innerHTML += `
     <div class="new-channel-cont">`;
       if (user && user.emailVerified === true) {
-        if ((doc.data().author && user.emailVerified === true)) {
-        outputData.innerHTML += `<img type="image" class="icon-pencil" src="./assets/pencil.png">;
-        <img type="image" class="icon-pencil" src="./assets/trash.png">`;
+        if (doc.data().author && user.emailVerified === true) {
+         // filtrar(user.uid, doc.data());
+        outputData.innerHTML += `<img type="image" id="pencil" class="icon-pencil" src="./assets/pencil.png">;
+        <img type="image" id="trash" class="icon-pencil" src="./assets/trash.png">`;
       }
       } else {
       // User is signed out
@@ -40,6 +43,43 @@ console.log(user, 'array user');
     <img type="image" class="icon-commentary" src="./assets/commentary.png">
     </div>
         `;
+        const modifyBtn = outputData.querySelector('#pencil')
+  //      const deleteBtn = outputData.querySelector('#trash')
+      modifyBtn.addEventListener('click', erase(doc.id));
+     // deleteBtn.addEventListener('click', modify(doc.id))
     });
+  
   });
 }
+
+// export const filtrar = (authorUid, doc.data()) => {
+//   const user = firebase.auth().currentUser;
+//   let idMatch;
+
+//   if (doc.data().author === user.uid) {
+//     idMatch = doc.data();
+//   }
+//   else {
+//     idMatch = doc.data().filter(element => {
+//       return element.keys.includes(user.uid);
+//     });
+//   }
+
+//   return idMatch;
+
+// }
+
+
+
+
+
+export const erase = ((id) => {
+  const db = firebase.firestore();
+  db.collection("posts").doc(id).delete().then(() => {
+  console.log("Document successfully deleted!");
+})
+    .catch((error) => {
+  console.error("Error removing document: ", error);
+  
+});
+});
