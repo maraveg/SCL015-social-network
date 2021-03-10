@@ -27,15 +27,15 @@ console.log(user, 'array user');
         if (user.uid == doc.data().author) {
         outputData.innerHTML += `
         <div class="icon-pencil">
-        <img type="image"  id="pencil" src="./assets/pencil.png">;
+        <img type="image"  id="pencil" src="./assets/pencil.png">
         <img type="image"  id="trash" src="./assets/trash.png">
         </div>`;
       }
      outputData.innerHTML += `
      <div class="container-white">
         <div class="post-head">
-        <p id="channel-print" class="new-channel-description">${doc.data().name}</p>
-        <p id="channel-print" class="new-channel-description">${doc.data().Date.toDate().toLocaleDateString("es-CL")}</p>
+        <p id="channel-print-name" >${doc.data().name}</p>
+        <p id="channel-print-date" >${doc.data().Date.toDate().toLocaleDateString("es-CL")}</p>
         </div>
         <p id="channel-print" class="new-channel-description">${doc.data().Post}</p>
         <p id="channel-print" class="new-channel-description"> Id de cada post ${doc.id}</p>
@@ -44,6 +44,7 @@ console.log(user, 'array user');
         <img type="image" class="icon-commentary" src="./assets/commentary.png">
       </div>
         `;
+
         //const modifyBtn = outputData.querySelector('#pencil')
   //      const deleteBtn = outputData.querySelector('#trash')
       //modifyBtn.addEventListener('click', () => {
