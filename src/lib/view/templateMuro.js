@@ -20,25 +20,33 @@ console.log(user, 'array user');
     querySnapshot.forEach((doc) => {
       console.log(doc.data());
       outputData.innerHTML += `
-    <div class="new-channel-cont">`;
-      if (user && user.emailVerified === true) {
+        <div class="new-channel-cont">
+        </div>`;
+        if (user && user.emailVerified === true) {
         if ((doc.data().author && user.emailVerified === true)) {
-        outputData.innerHTML += `<img type="image" class="icon-pencil" src="./assets/pencil.png">;
-        <img type="image" class="icon-pencil" src="./assets/trash.png">`;
+        outputData.innerHTML += `
+        <div class="icon-pencil">
+        <img type="image"  id="pencil" src="./assets/pencil.png">;
+        <img type="image"  id="trash" src="./assets/trash.png">
+        </div>`;
       }
       } else {
       // User is signed out
       console.log('no existe usuario activo');
       // ...
-    }
-     outputData.innerHTML += `<p id="channel-print" class="new-channel-description">${doc.data().name}</p>
-    <p id="channel-print" class="new-channel-description">${doc.data().Date.toDate().toLocaleDateString("es-CL")}</p>
-    <p id="channel-print" class="new-channel-description">${doc.data().Post}</p>
-    <p id="channel-print" class="new-channel-description"> Id de cada post ${doc.id}</p>
-    <p id="channel-print" class="new-channel-description"> Id del usuario activo ${doc.data().author}</p>
-    <img type="image" class="icon-moon" src="./assets/moon.png">
-    <img type="image" class="icon-commentary" src="./assets/commentary.png">
-    </div>
+      }
+     outputData.innerHTML += `
+     <div class="container-white">
+        <div class="post-head">
+        <p id="channel-print" class="new-channel-description">${doc.data().name}</p>
+        <p id="channel-print" class="new-channel-description">${doc.data().Date.toDate().toLocaleDateString("es-CL")}</p>
+        </div>
+        <p id="channel-print" class="new-channel-description">${doc.data().Post}</p>
+        <p id="channel-print" class="new-channel-description"> Id de cada post ${doc.id}</p>
+        <p id="channel-print" class="new-channel-description"> Id del usuario activo ${doc.data().author}</p>
+        <img type="image" class="icon-moon" src="./assets/moon.png">
+        <img type="image" class="icon-commentary" src="./assets/commentary.png">
+      </div>
         `;
     });
   });
