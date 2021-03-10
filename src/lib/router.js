@@ -1,6 +1,6 @@
-import { meetUs } from './view/templateConocenos.js';
-import { aside } from './view/templateCostado.js';
-import { editPost } from './view/templateEditar.js';
+//import { meetUs } from './view/templateConocenos.js';
+//import { aside } from './view/templateCostado.js';
+//import { editPost } from './view/templateEditar.js';
 import { access } from './view/templateEntrada.js';
 // import { home } from '../view/templateHome.js';
 import { logIn } from './view/templateInicioSesion.js';
@@ -8,10 +8,10 @@ import { menu } from './view/templateMenu.js';
 import { wall } from './view/templateMuro.js';
 import { navBar } from './view/templateNavegacion.js';
 import { create } from './view/templateNuevoPost.js';
-import { profile } from './view/templatePerfil.js';
-import { about } from './view/templateQueEs.js';
+//import { profile } from './view/templatePerfil.js';
+//import { about } from './view/templateQueEs.js';
 import { signUp } from './view/templateRegistro.js';
-import { routes } from './view/templateRutas.js';
+//import { routes } from './view/templateRutas.js';
 // import { timeline } from '../view/templateTimeline.js';
 
 export const changeRoute = (hash) => {
