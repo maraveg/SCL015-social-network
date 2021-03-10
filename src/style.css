@@ -294,7 +294,7 @@ body{
 
 /*       Post      */
 
-.new-channel-cont{
+.container-white{
     background-color: #ffffff;
     width: 297px;
     margin-left: 5%;
@@ -305,7 +305,7 @@ body{
     margin-left: 5%;
     margin-top: 3%;
     margin-right: 5%;
-    background-color: #E4E3E3;
+    background-color: #ffffff;
     color: #014D3F;
 }
 #container-text{
@@ -377,6 +377,10 @@ body{
 .navbar{
     padding: 5px;
     margin-right: 10%;
+}
+.icon-pencil{
+    display: flex;
+    align-content: space-between;
 }
 
 /*    Template Nuevo Post   */
