@@ -40,47 +40,41 @@ export const createAccount = () => {
   const userName = document.querySelector('#signup-name').value;
   const email = document.querySelector('#signup-email').value;
   const password = document.querySelector('#signup-password').value;
-  
 
   console.log(userName);
   console.log(event);
 
-  // const db = firebase.firestore();
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
       const user = firebase.auth().currentUser;
       user.updateProfile({
-        // aqui guardas los componentes
+        // componentes save here
         displayName: userName,
 
       }).then(function() {
-          alert(userName, 'Se muestra');
-          verify();
-          console.log(user);
+        alert(userName, 'Se muestra');
+        verify();
+        console.log(user);
       }, function(error) {
-               console.log(error);
-      });        
-}, function(error) {
-           // Handle Errors here.
-           var errorCode = error.code;
-           var errorMessage = error.message;
-           // [START_EXCLUDE]
-           if (errorCode == 'auth/weak-password') {
-               Alert('La contraseña es muy corta');
-               
-           } else if (errorCode == 'auth/invalid-email') {
-            alert('El correo ingresado no es valido')
-          } else {
-             
-               console.log(errorMessage);
-           }
+        console.log(error);
+      });
+    }, function(error) {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode == 'auth/weak-password') {
+        Alert('La contraseña es muy corta');
+      } else if (errorCode == 'auth/invalid-email') {
+        alert('El correo ingresado no es valido')
+      } else {
+        console.log(errorMessage);
+      }
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
-      // alert("Revisa el email de verificación que te enviamos");
     });
 };
 
@@ -93,4 +87,4 @@ export const verify = () => {
   }).catch((error) => {
     // An error happened.
   });
-}
+};

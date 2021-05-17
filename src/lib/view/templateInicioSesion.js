@@ -46,9 +46,6 @@ export const fbLogin = () => {
   firebase.auth().signInWithEmailAndPassword(logEmail, logPassword)
     .then((user) => {
       console.log({ prueba: user })
-      // window.location.href = '#/wall';
-    // // Signed in
-    // // ...
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -57,7 +54,6 @@ export const fbLogin = () => {
       console.log(errorMessage);
     });
 };
-
 
 export const observer = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -72,29 +68,3 @@ export const observer = () => {
   });
 };
 observer();
-
-// export const logged = (user) => {
-//   const divContainer = document.querySelector('#container');
-//   if (user.emailVerified) {
-//     const viewContainer = `
-//     <p>¡Bienvenido!</p>
-//     <button id="logout-buton">Cerrar Sesión</button>
-//     `;
-//     divContainer.innerHTML = viewContainer;
-//   }
-//   const logoutClick = divContainer.querySelector('#logout-buton');
-//   logoutClick.addEventListener('click', logout);
-//   return divContainer;
-// };
-
-// export const logout = () => {
-//   firebase.auth().signOut()
-//     .then(() => {
-//       console.log('Saliendo...');
-//     // Sign-out successful.
-//     }).catch((error) => {
-//     // An error happened.
-//       console.log(error);
-//     });
-// };
-// <a href="#/wall"><button id="ingreso">Inicio Sesión</button></a>

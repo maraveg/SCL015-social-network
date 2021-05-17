@@ -4,7 +4,6 @@ export const navBar = () => {
   <nav class="navbar navbar-expand-lg navbar-dark bg-lightgray">
   <div class="container-fluid navigation-bar">
     <a class="navbar-brand" href="#/wall">
-
           <div class="head-icons">
               <img id="logo" src="./assets/logo-sin-letras.png">
               <a href="#/wall"><img src="./assets/home.png" id="home-icon"></a><br>
@@ -26,10 +25,7 @@ export const navBar = () => {
             </li>
            </ul> 
           </div>
-    
-    </a>
-    
-    
+    </a>  
   </div>
 </nav>
     `;

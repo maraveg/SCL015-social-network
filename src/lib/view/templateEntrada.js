@@ -1,4 +1,4 @@
-import {login} from '../index.js'; 
+import { login } from '../index.js';
 
 export const access = () => {
   const divAccess = document.createElement('div');
@@ -26,9 +26,7 @@ export const access = () => {
 
   const button = divAccess.querySelector('#login-google');
   button.addEventListener('click', () => {
-    login()
-    
-  })
+    login();
+  });
   return divAccess;
 };
-

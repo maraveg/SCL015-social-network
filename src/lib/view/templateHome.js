@@ -10,7 +10,7 @@ export const home = () => {
 
   const btn = divHome.querySelector('#loginGoogle');
   btn.addEventListener('click', () => {
-  // login();
+
   });
 
   return divHome;
